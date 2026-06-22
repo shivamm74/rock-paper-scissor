@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="rockpaperscissor.css">
+</head>
+<body>
+ 
+
+    <h3 style="display: flex; justify-content: center; color: aliceblue;font-size: 40px;text-decoration: dashed;">rock paper scissor</h3>
+    <div>
+
+    <button  class = "button" onclick = "
+    game('rock') ; "><p id ="rock1"><i class="fa-solid fa-hand-back-fist"></i></p></button>
+
+
+
+
+<button class = "button" onclick = " 
+    game('paper');
+    "><p id = "rock1"><i class="fa-solid fa-hand"></i></p></button>
+
+
+<button class = "button" onclick = "
+
+    game('scissor');"><p id = "rock1"> <i class="fa-solid fa-hand-scissors"></i></p></button>
+    
+
+<button class = "button" onclick = "score.wins = 0,
+score.lost = 0,
+score.tie = 0,
+alert(`score was reset - wins : ${score.wins} lost :${score.lost} tie : ${score.tie}`)
+localStorage.removeItem('score')
+
+
+"
+
+
+
+>reset score</button>
+
+</div>
+
+
+
+
+<script src="rockpprscissor.js"></script>
+ 
+</body>
+</html>
