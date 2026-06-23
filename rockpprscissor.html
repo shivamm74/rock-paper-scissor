@@ -12,6 +12,8 @@
  
 
     <h3 style="display: flex; justify-content: center; color: aliceblue;font-size: 40px;text-decoration: dashed;">rock paper scissor</h3>
+
+    
     <div>
 
     <button  class = "button" onclick = "
@@ -30,20 +32,39 @@
     game('scissor');"><p id = "rock1"> <i class="fa-solid fa-hand-scissors"></i></p></button>
     
 
-<button class = "button" onclick = "score.wins = 0,
-score.lost = 0,
-score.tie = 0,
-alert(`score was reset - wins : ${score.wins} lost :${score.lost} tie : ${score.tie}`)
-localStorage.removeItem('score')
-
-
-"
+<button 
 
 
 
->reset score</button>
+class = "button clear3" onclick = "
+clearbutton()">reset score</button>
+
+
+
+
+
 
 </div>
+
+<div id = "score6">
+    <div id = "score7">
+        <p id = "phra2"></p>
+    </div>
+</div>
+
+
+<!-- <div id ="score3">
+    <input id = "score2" placeholder = "score">
+    
+    
+</div> -->
+
+<div id = "score5">
+    <div id = "score4">
+        <p id = "phra"></p>
+    </div>
+</div>
+
 
 
 

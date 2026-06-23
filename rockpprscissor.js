@@ -1,6 +1,15 @@
 let score = JSON.parse(localStorage.getItem("score")) || { wins : 0 , lost :0 , ties :0 };
 
 
+function clearbutton () {
+    score.wins = 0,
+    score.lost = 0,
+    score.tie = 0,
+    localStorage.removeItem('score')
+ document.querySelector('#phra2').innerHTML = `score has been reset`;
+ document.querySelector('#phra').innerHTML =  `win : ${score.wins} , lost : ${score.lost} , tie : ${score.tie}`;
+
+};
 
 
 function pickcomputermove() {
@@ -72,16 +81,21 @@ if (result === 'win') {
 }
 
 
+
+if (result === 'win'){
+    document.querySelector('#phra2').innerHTML = `you  won , you choose ${playermove} computer choose ${computermove}` 
+    document.querySelector('#phra').innerHTML =  `win : ${score.wins} , lost : ${score.lost} , tie : ${score.tie}`;
+} else if (result === 'lost') {
+    document.querySelector('#phra2').innerHTML = `you lost , you choose ${playermove} computer choose ${computermove}`
+    document.querySelector('#phra').innerHTML =  `win : ${score.wins} , lost : ${score.lost} , tie : ${score.tie}`;
+    
+} else if (result === 'tie') {
+    document.querySelector('#phra2').innerHTML = `it's a tie !!! , you choose ${playermove} computer choose ${computermove}`
+    document.querySelector('#phra').innerHTML =  `win : ${score.wins} , lost : ${score.lost} , tie : ${score.tie}`;
+    
+} 
+
 localStorage.setItem("score",JSON.stringify(score));
-
-
-
-
-
-
-
-alert(`you picked ${playermove} ,computer picked ${computermove} .you  ${result}
-    win : ${score.wins} , lost : ${score.lost} , tie : ${score.tie}`);
         console.log(result);
         console.log(score);
 }
