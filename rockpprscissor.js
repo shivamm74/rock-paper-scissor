@@ -93,6 +93,7 @@ if (result === 'win'){
     document.querySelector('#phra2').innerHTML = `it's a tie !!! , you choose ${playermove} computer choose ${computermove}`
     document.querySelector('#phra').innerHTML =  `win : ${score.wins} , lost : ${score.lost} , tie : ${score.tie}`;
     
+    
 } 
 
 localStorage.setItem("score",JSON.stringify(score));
