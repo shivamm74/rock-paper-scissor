@@ -1,5 +1,6 @@
 let score = JSON.parse(localStorage.getItem("score")) || { wins : 0 , lost :0 , ties :0 };
 
+localStorage.getItem('inner-html');
 
 function clearbutton () {
     score.wins = 0,
@@ -93,8 +94,10 @@ if (result === 'win'){
     document.querySelector('#phra2').innerHTML = `it's a tie !!! , you choose ${playermove} computer choose ${computermove}`
     document.querySelector('#phra').innerHTML =  `win : ${score.wins} , lost : ${score.lost} , tie : ${score.tie}`;
     
-    
+
 } 
+
+localStorage.setItem('inner-html', document.querySelector('#phra2').innerHTML);
 
 localStorage.setItem("score",JSON.stringify(score));
         console.log(result);
