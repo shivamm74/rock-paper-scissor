@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ="stylesheet" href ="subscribe.css">
+</head>
+<body>
+    <button class = "subscribe" onclick = "subscribed()">subscribe</button>
+    <script>
+        function subscribed() {
+           const buttonelement = document.querySelector('.subscribe');
+           if(buttonelement.innerText === 'subscribe') {
+            buttonelement.innerText ='subscribed';
+            buttonelement.classList.add('is-subscribed');
+
+
+           } else{
+            buttonelement.innerText = 'subscribe';
+            buttonelement.classList.remove('is-subscribed');
+        
+           }
+        }
+    </script>
+</body>
+</html>
