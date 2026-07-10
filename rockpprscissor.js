@@ -1,4 +1,4 @@
-let score = JSON.parse(localStorage.getItem("score")) || { wins : 0 , lost :0 , ties :0 };
+let score = JSON.parse(localStorage.getItem("score")) || { wins : 0 , lost :0 , tie :0 };
 
 localStorage.getItem('inner-html');
 
