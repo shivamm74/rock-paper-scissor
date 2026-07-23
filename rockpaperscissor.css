@@ -62,6 +62,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 100px;
+    padding-bottom: 15px;
 }
 
 #score2 {
@@ -127,6 +128,13 @@ body {
 
 .clear3 {
     font-size: 24px;
+}
+
+.auto-rotate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
 }
 
 
