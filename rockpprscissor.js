@@ -103,4 +103,14 @@ localStorage.setItem("score",JSON.stringify(score));
         console.log(result);
         console.log(score);
 }
+
+
+function autoplay(){
+    setInterval(function(){
+            const playermove = pickcomputermove();
+            game(playermove);
+        },1000 );
+}
+
+
      

@@ -124,6 +124,7 @@ body {
 #phra2 {
     color: white;
     font-size: 40px;
+    text-transform: capitalize;
 }
 
 .clear3 {
