@@ -18,8 +18,8 @@ div {
     background-color:white;
     border: 6px solid brown;
     
-    height: 350px;
-    width:350px;
+    height: 250px;
+    width:250px;
 
 }
 
@@ -28,8 +28,8 @@ div {
 
     
            
-    width: 250px;      
-    height: 250px;     
+    width: 200px;      
+    height: 200px;     
     border-radius: 50%;    
     
     
@@ -62,7 +62,9 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 100px;
-    padding-bottom: 15px;
+    margin: 0;
+
+
 }
 
 #score2 {

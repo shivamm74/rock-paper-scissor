@@ -104,13 +104,23 @@ localStorage.setItem("score",JSON.stringify(score));
         console.log(score);
 }
 
+let isautoplaying = false;
+let intervalid;
 
 function autoplay(){
-    setInterval(function(){
+   
+    if(!isautoplaying){
+        intervalid = setInterval(function(){
             const playermove = pickcomputermove();
             game(playermove);
         },1000 );
+        isautoplaying = true;
 }
+ else { 
+    clearInterval(intervalid);
+    isautoplaying = false;
 
+}
+}
 
      
