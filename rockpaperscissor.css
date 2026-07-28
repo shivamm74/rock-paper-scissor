@@ -140,6 +140,62 @@ body {
     font-size: 100px;
 }
 
+#score6 {
+    height: auto;
+    min-height: 70px;
+}
+
+#score7 {
+    height: auto;
+    min-height: 70px;
+    width: auto;
+    max-width: 100%;
+}
+
+#phra2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.result-line {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45em;
+    white-space: nowrap;
+}
+
+.result-move-circle {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    border: 2px solid rgba(245, 245, 220, 0.45);
+    background: rgba(255, 255, 255, 0.06);
+    flex-shrink: 0;
+}
+
+.result-move-circle i {
+    font-size: 1.35em;
+    color: white;
+    line-height: 1;
+}
+
+.result-move-label {
+    font-size: 0.28em;
+    line-height: 1.15;
+    margin-top: 0.15em;
+    text-transform: capitalize;
+    color: aliceblue;
+    font-weight: 600;
+}
+
 
 
 

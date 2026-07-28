@@ -40,6 +40,15 @@ if (randomnumber >= 0 && randomnumber <= 1/3){
 return computermove;
 } 
 
+function moveIcon(move) {
+    const iconClass = {
+        rock: 'fa-hand-back-fist',
+        paper: 'fa-hand',
+        scissor: 'fa-hand-scissors'
+    }[move];
+    return `<span class="result-move-circle"><i class="fa-solid ${iconClass}"></i><span class="result-move-label">${move}</span></span>`;
+}
+
 function game(playermove){
     let computermove = pickcomputermove();
     let result = '';
@@ -95,15 +104,17 @@ if (result === 'win') {
 
 
 
+const movesLine = `you choose ${moveIcon(playermove)} computer choose ${moveIcon(computermove)}`;
+
 if (result === 'win'){
-    document.querySelector('#phra2').innerHTML = `you  won , you choose ${playermove} computer choose ${computermove}` 
+    document.querySelector('#phra2').innerHTML = `<span class="result-line">${movesLine} , you won</span>` 
     document.querySelector('#phra').innerHTML =  `win : ${score.wins} , lost : ${score.lost} , tie : ${score.tie}`;
 } else if (result === 'lost') {
-    document.querySelector('#phra2').innerHTML = `you lost , you choose ${playermove} computer choose ${computermove}`
+    document.querySelector('#phra2').innerHTML = `<span class="result-line">${movesLine} , you lost</span>`
     document.querySelector('#phra').innerHTML =  `win : ${score.wins} , lost : ${score.lost} , tie : ${score.tie}`;
     
 } else if (result === 'tie') {
-    document.querySelector('#phra2').innerHTML = `it's a tie !!! , you choose ${playermove} computer choose ${computermove}`
+    document.querySelector('#phra2').innerHTML = `<span class="result-line">${movesLine} , it's a tie !!!</span>`
     document.querySelector('#phra').innerHTML =  `win : ${score.wins} , lost : ${score.lost} , tie : ${score.tie}`;
     
 
