@@ -11,6 +11,18 @@ function clearbutton () {
  document.querySelector('#phra').innerHTML =  `win : ${score.wins} , lost : ${score.lost} , tie : ${score.tie}`;
 
 };
+document.querySelector('.js-rock').addEventListener('click',() => {
+    game('rock');
+})
+
+document.querySelector('.js-paper').addEventListener('click',() => {
+    game('paper');
+})
+
+document.querySelector('.js-scissor').addEventListener('click',() => {
+    game('scissor');
+})
+
 
 
 function pickcomputermove() {
@@ -104,23 +116,21 @@ localStorage.setItem("score",JSON.stringify(score));
         console.log(score);
 }
 
-let isautoplaying = false;
 let intervalid;
+let isautoplaying = false;
 
-function autoplay(){
-   
+function autoplay() {
     if(!isautoplaying){
         intervalid = setInterval(function(){
-            const playermove = pickcomputermove();
+            let playermove = pickcomputermove();
             game(playermove);
-        },1000 );
+        },1000);
         isautoplaying = true;
-}
- else { 
-    clearInterval(intervalid);
-    isautoplaying = false;
+    } else {
+        clearInterval(intervalid);
+        isautoplaying = false;
 
-}
+    }
 }
 
      
