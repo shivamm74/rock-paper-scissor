@@ -2,10 +2,21 @@ let score = JSON.parse(localStorage.getItem("score")) || { wins : 0 , lost :0 , 
 
 localStorage.getItem('inner-html');
 
+document.body.addEventListener('keydown',(event) => {
+    if(event.key === 'r'){
+        game('rock');
+    }else if (event.key === 'p'){
+        game('paper');
+    }else if(event.key === 's'){
+        game('scissor')
+    }
+})
+
+
 function clearbutton () {
-    score.wins = 0,
-    score.lost = 0,
-    score.tie = 0,
+    score.wins = 0;
+    score.lost = 0;
+    score.tie = 0;
     localStorage.removeItem('score')
  document.querySelector('#phra2').innerHTML = `score has been reset`;
  document.querySelector('#phra').innerHTML =  `win : ${score.wins} , lost : ${score.lost} , tie : ${score.tie}`;
