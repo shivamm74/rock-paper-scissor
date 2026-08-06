@@ -143,6 +143,8 @@ localStorage.setItem("score",JSON.stringify(score));
 }
 
 document.querySelector('.autoplay').addEventListener('click',() => {
+    document.querySelector('.autoplay-icon').innerHTML = `<i class="fa-solid fa-stop"></i>`
+
     autoplay();
 })
 document.body.addEventListener('keydown',(event) => {
@@ -164,6 +166,7 @@ function autoplay() {
     } else {
         clearInterval(intervalid);
         isautoplaying = false;
+        document.querySelector('.autoplay-icon').innerHTML = `<i class = "fa-solid fa-circle-play"></i>`
 
     }
 }
