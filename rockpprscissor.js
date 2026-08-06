@@ -9,9 +9,10 @@ document.body.addEventListener('keydown',(event) => {
         game('paper');
     }else if(event.key === 's'){
         game('scissor')
+    }else if(event.key === 'c'){
+        clearbutton();
     }
 })
-
 
 function clearbutton () {
     score.wins = 0;
@@ -24,6 +25,9 @@ function clearbutton () {
 };
 document.querySelector('.js-rock').addEventListener('click',() => {
     game('rock');
+})
+document.querySelector('.clear3').addEventListener('click',() => {
+    clearbutton();
 })
 
 document.querySelector('.js-paper').addEventListener('click',() => {
@@ -137,6 +141,15 @@ localStorage.setItem("score",JSON.stringify(score));
         console.log(result);
         console.log(score);
 }
+
+document.querySelector('.autoplay').addEventListener('click',() => {
+    autoplay();
+})
+document.body.addEventListener('keydown',(event) => {
+    if(event.key === 'a'){
+        autoplay();
+    }
+})
 
 let intervalid;
 let isautoplaying = false;
