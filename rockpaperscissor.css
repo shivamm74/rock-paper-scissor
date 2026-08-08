@@ -197,7 +197,17 @@ body {
 }
 
 
-
+.js-reset-score {
+    height: 50px;
+    width :100px;
+    border-radius: 50px;
+    color: brown;
+    border: 3px solid brown;
+    background-color: white;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    text-transform: capitalize;
+}
 
 
 

@@ -27,7 +27,7 @@ document.querySelector('.js-rock').addEventListener('click',() => {
     game('rock');
 })
 document.querySelector('.clear3').addEventListener('click',() => {
-    clearbutton();
+    showmsg();
 })
 
 document.querySelector('.js-paper').addEventListener('click',() => {
@@ -37,6 +37,22 @@ document.querySelector('.js-paper').addEventListener('click',() => {
 document.querySelector('.js-scissor').addEventListener('click',() => {
     game('scissor');
 })
+
+
+
+const showmsg = () => {
+    document.querySelector('#phra2').innerHTML = `do you want to reset score ?`
+    document.querySelector('#phra').innerHTML = `<button class = 'js-reset-score js-yes'>yes</button>  <button class = 'js-reset-score js-no'>no</button>`
+    document.querySelector('.js-yes').addEventListener('click',() => {
+        clearbutton();
+    })
+    document.querySelector('.js-no').addEventListener('click',() => {
+        document.querySelector('#phra2').innerHTML =  `win : ${score.wins} , lost : ${score.lost} , tie : ${score.tie}`;
+        document.querySelector('#phra').innerHTML = '';
+    })
+}
+
+
 
 
 
